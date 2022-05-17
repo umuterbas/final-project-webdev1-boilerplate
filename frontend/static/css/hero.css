@@ -24,7 +24,18 @@ main {
 }
 .slider__slides {
   width: 100%;
-  padding-top: 66%;
+}
+.slider__slides :first-child {
+  background-image: url("/images/compass.jpeg");
+}
+.slider__slides :nth-child(2) {
+  background-image: url("/images/japan.jpeg");
+}
+.slider__slides :nth-child(3) {
+  background-image: url("/images/ecuador.jpeg");
+}
+.slider__slides :last-child {
+  background-image: url("/images/turkey.jpeg");
 }
 .slider__image {
   /* height: 100vh; */
@@ -38,11 +49,8 @@ main {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: lemonchiffon;
   transition: 1s;
-  opacity: 0;
   background-size: cover;
-  /* background-image: url(./image/tokyo.jpeg); */
 }
 .slider__image.active {
   /* transition: 3s; */
