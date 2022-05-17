@@ -61,6 +61,9 @@ import AbstractView from "./AbstractView.js";
 //   timer = setInterval(autoChange, 5000);
 // }
 
+const jumpToCountriesPage = () =>{
+    location.replace("localhost:300/countries");
+}
 export default class extends AbstractView{
     constructor(params) {
         super(params);
@@ -68,22 +71,24 @@ export default class extends AbstractView{
     }
 
     async getHTML() {
-        const heroPage = `
+      const heroPage = `
         <section class="global-container">
             <header>
                 <h1>Country List</h1>
+                <i class="fa-solid fa-moon"></i>
             </header>
             <main>
                 <div class="container">
                     <div class="slider">
                         <div class="slider__slides">
-                            <div id="slideshow" class="slider__image active></div>
+                            <div id="slideshow" class="slider__image active"></div>
                             <div id="slideshow" class="slider__image"></div>
                             <div id="slideshow" class="slider__image"></div>
                             <div id="slideshow" class="slider__image"></div>
                         </div>
-                        </div>
+                        <span class="link-btn" onClick="jumpToCountriesPage()"><a>Explore the world !!</a></span>
                     </div>
+                </div>
                      <div id="nav-button--prev" class="slider__nav-button"></div>
                     <div id="nav-button--next" class="slider__nav-button"></div>
                     <div class="slider__nav">
@@ -96,7 +101,6 @@ export default class extends AbstractView{
             </main>
         </section>
         `;
-        return heroPage;
-
+      return heroPage;
     }
 }

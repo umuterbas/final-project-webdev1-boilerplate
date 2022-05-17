@@ -6,6 +6,21 @@ main{
     height: 90%;
 }
 
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h1{
+        margin-left: 1em;
+    }
+
+    i{
+        margin-right: 1em;
+        cursor: pointer;
+    }
+}
+
 .container{
     display: flex;
     align-items: center;
@@ -18,31 +33,54 @@ main{
     position: relative;
     width: 100%;
     height: 100%;
-    max-width: 1440px;
-    // margin: 10px;
     background-color: white;
     overflow: hidden;
+
+    .link-btn{
+        z-index: 100;
+        position: absolute;
+        top: 50%;
+        left: 33%;
+        padding: 1rem;
+        background-color: #1818187d;
+        border-radius: 10px;
+        cursor: pointer;
+
+        a{
+            color: #e5f4f1;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        &:hover{
+            background-color: #dad7d7b8;
+            transform: scale(1.2);
+            a{
+                color: hsl(0, 0%, 15%);
+            }
+            transition: .3s;
+        }
+    }
 
     &__slides{
         width: 100%;
 
         :first-child{
-            background-image: url("/images/compass.jpeg");
+            background-image: url("../images/compass.jpeg");
         }
         :nth-child(2){
-            background-image: url("/images/japan.jpeg");
+            background-image: url("../images/japan.jpeg");
         }
         :nth-child(3){
-            background-image: url("/images/ecuador.jpeg");
+            background-image: url("../images/ecuador.jpeg");
         }
         :last-child{
-            background-image: url("/images/turkey.jpeg");
+            background-image: url("../images/turkey.jpeg");
         }
+
     }
 
     &__image{
-        /* height: 100vh; */
-        /* background-repeat: no-repeat; */
         display: flex;
         align-items: center;
         justify-content: center;
@@ -50,19 +88,18 @@ main{
         font-weight: bold;
         position: absolute;
         top: 0;
-        // left: 50px;
         width: 100%;
         height: 100%;
-        // background-color: lemonchiffon;
         transition: 1s;
         // opacity: 0;
         background-size: cover;
+
+        &.active{
+            /* transition: 3s; */
+            opacity: 1;
+        }
     }
 
-    &__image.active{
-        /* transition: 3s; */
-        opacity: 1;
-    }
 
     &__nav-button{
         position: absolute;
@@ -90,7 +127,7 @@ main{
         background-color: #333;
         opacity: 8;
         margin: 0 10px;
-        /* cursor: pointer; */
+        // /* cursor: pointer; */
         display: none;
 
         .active{
@@ -141,4 +178,22 @@ main{
     height: 40px;
     width: 40px;
   }
+}
+
+
+@media screen and (min-width: 1279px) {
+    header{
+        i{
+            font-size: 2rem;
+        }
+    }
+    .slider{
+        .link-btn{
+            left: 45%;
+
+            a{
+                font-size: 2rem;
+            }
+        }
+    }
 }
