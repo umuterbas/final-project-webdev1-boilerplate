@@ -9,5 +9,5 @@ const countries = getCountries();
 //     });
 // }
 
-displayAllCountries();
+// displayAllCountries();
 console.log(countries);
