@@ -77,10 +77,10 @@ export default class extends AbstractView{
                 <div class="container">
                     <div class="slider">
                         <div class="slider__slides">
-                            <div id="slideshow" class="slider__image active" style="background-color: aqua;"></div>
-                            <div id="slideshow" class="slider__image" style="background-color: blueviolet;"></div>
-                            <div id="slideshow" class="slider__image" style="background-color: coral;"></div>
-                            <div id="slideshow" class="slider__image" style="background-color: chartreuse;"></div>
+                            <div id="slideshow" class="slider__image active></div>
+                            <div id="slideshow" class="slider__image"></div>
+                            <div id="slideshow" class="slider__image"></div>
+                            <div id="slideshow" class="slider__image"></div>
                         </div>
                         </div>
                     </div>
