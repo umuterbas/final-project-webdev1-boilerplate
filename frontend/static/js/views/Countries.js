@@ -10,3 +10,4 @@ export default class extends AbstractView{
         return "<h1>Countries</h1>";
     }
 }
+

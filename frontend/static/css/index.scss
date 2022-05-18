@@ -1,0 +1,16 @@
+*{
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+body{
+    color:hsl(200, 15%, 8%);
+    background-color:hsl(0, 0%, 98%);
+}
+
+.dark-mode{
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(207, 26%, 17%);
+}
+
+@import "./heropage/hero";
+
