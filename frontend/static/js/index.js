@@ -5,9 +5,11 @@ const countries = getCountries();
 // const display = document.querySelector("#app");
 // const displayAllCountries = () =>{
 //     countries.forEach(element => {
-//         display.innerHTML = element.name;
+//         return <div>{element.name}</div>
 //     });
 // }
 
 // displayAllCountries();
 console.log(countries);
+
+// export default displayAllCountries;

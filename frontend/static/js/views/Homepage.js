@@ -61,46 +61,48 @@ import AbstractView from "./AbstractView.js";
 //   timer = setInterval(autoChange, 5000);
 // }
 
-const jumpToCountriesPage = () =>{
-    location.replace("localhost:300/countries");
-}
 export default class extends AbstractView{
     constructor(params) {
         super(params);
         this.setTitle("Homepage");
     }
-
+    
     async getHTML() {
-      const heroPage = `
-        <section class="global-container">
-            <header>
-                <h1>Country List</h1>
-                <i class="fa-solid fa-moon"></i>
-            </header>
-            <main>
-                <div class="container">
-                    <div class="slider">
-                        <div class="slider__slides">
-                            <div id="slideshow" class="slider__image active"></div>
-                            <div id="slideshow" class="slider__image"></div>
-                            <div id="slideshow" class="slider__image"></div>
-                            <div id="slideshow" class="slider__image"></div>
+        // const jumpToCountriesPage = () => {
+        //     window.location.href = "./Countries.js";
+        // };
+
+        const heroPage = `
+            <section class="global-container">
+                <header>
+                    <h1>Country List</h1>
+                    <i class="fa-solid fa-moon"></i>
+                </header>
+                <main>
+                    <div class="container">
+                        <div class="slider">
+                            <div class="slider__slides">
+                                <div id="slideshow" class="slider__image active"></div>
+                                <div id="slideshow" class="slider__image"></div>
+                                <div id="slideshow" class="slider__image"></div>
+                                <div id="slideshow" class="slider__image"></div>
+                            </div>
+                            <span class="link-btn"><a>Explore the world !!</a></span>
                         </div>
-                        <span class="link-btn" onClick="jumpToCountriesPage()"><a>Explore the world !!</a></span>
                     </div>
-                </div>
-                     <div id="nav-button--prev" class="slider__nav-button"></div>
-                    <div id="nav-button--next" class="slider__nav-button"></div>
-                    <div class="slider__nav">
-                        <div class="slider__navlink active"></div>
-                        <div class="slider__navlink"></div>
-                        <div class="slider__navlink"></div>
-                        <div class="slider__navlink"></div>
+                        <div id="nav-button--prev" class="slider__nav-button"></div>
+                        <div id="nav-button--next" class="slider__nav-button"></div>
+                        <div class="slider__nav">
+                            <div class="slider__navlink active"></div>
+                            <div class="slider__navlink"></div>
+                            <div class="slider__navlink"></div>
+                            <div class="slider__navlink"></div>
+                        </div>
                     </div>
-                </div>
-            </main>
-        </section>
-        `;
+                </main>
+            </section>
+            `;
+            
       return heroPage;
     }
 }
