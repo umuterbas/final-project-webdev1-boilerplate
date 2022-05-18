@@ -8,7 +8,6 @@ export default class extends AbstractView{
     }
 
     async getHTML() {
-        
         return `
                 <nav>
                 <section>
