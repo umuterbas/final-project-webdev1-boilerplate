@@ -29,6 +29,55 @@ body {
     margin: 0 8%;
 }
 
+body {
+    background-color: hsl(0, 0%, 98%);
+}
+
+.title {
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.subtitle {
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+nav {
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+
+    section {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+    }
+}
+
+.dark-moon {
+    height: auto;
+    width: 16px;
+}
+
+.dark-mode-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-icon {
+    height: auto;
+    width: 20px;
+}
+
 .buttons {
     color: $button_font_color;
     margin-top: 5%;
@@ -54,7 +103,7 @@ body {
     align-items: center;
 }
 
-.border_countries{
+.border_countries {
     margin-top: 5%;
     display: flex;
     align-items: center;
@@ -93,21 +142,69 @@ body {
 
 @media only screen and (max-width: 376px) {
 
+    body {
+        background-color: hsl(0, 0%, 98%);
+    }
+
+    .title {
+        font-weight: 800;
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-weight: 600;
+        font-size: 22px;
+    }
+
+    nav {
+        background-color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+
+        section {
+            width: 100%;
+            padding-left: 150px;
+            padding-right: 150px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+    }
+
+    .dark-moon {
+        height: auto;
+        width: 22px;
+    }
+
+    .dark-mode-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .home-icon {
+        height: auto;
+        width: 28px;
+    }
+
     .details_all {
         flex-direction: column;
     }
 
-    .country_details{
+    .country_details {
         flex-direction: column;
     }
 
     .border_countries {
         flex-direction: column;
-        align-items: flex-start ;
+        align-items: flex-start;
     }
 
     .border_buttons_all {
-        flex-direction: column; 
+        flex-direction: column;
     }
 
     .country_heading {
@@ -122,9 +219,9 @@ body {
         margin-left: 0;
     }
 
-    
-    
 
 
 
-  }
+
+
+}
