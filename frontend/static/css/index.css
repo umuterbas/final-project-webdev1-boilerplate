@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Redressed&family=Roboto:wght@100&display=swap");
+@import "./country-page/country-page.css";
 * {
   font-family: "Nunito Sans", sans-serif;
 }
@@ -188,5 +190,119 @@ header i {
   }
   .slider .link-btn a {
     font-size: 2rem;
+  }
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+p {
+  font-size: 12px;
+  margin-top: 0.4%;
+  margin-left: 0.5rem;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+body {
+  margin: 0 8%;
+}
+
+.buttons {
+  color: rgb(10, 97, 229);
+  margin-top: 5%;
+  background-color: white;
+  border-color: rgb(118, 117, 117);
+  padding: 10px 30px;
+}
+
+.country_details {
+  margin-top: 7%;
+  display: flex;
+}
+
+.flag_view {
+  max-width: 100%;
+  min-width: 20rem;
+}
+
+.headings_div {
+  margin-top: 1.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.border_countries {
+  margin-top: 5%;
+  display: flex;
+  align-items: center;
+}
+
+.border_contry_buttons {
+  display: flex;
+  margin-top: -0.1%;
+}
+
+.details_all {
+  display: flex;
+}
+
+.country_heading {
+  margin-top: 0%;
+}
+
+.details_right {
+  margin-top: 6%;
+}
+
+.details_left {
+  margin-left: 1.5rem;
+}
+
+.border_buttons_all {
+  display: flex;
+  margin-left: 0.5rem;
+}
+
+.border_contry_buttons {
+  margin-left: 0.5rem;
+}
+
+@media only screen and (max-width: 376px) {
+  .details_all {
+    flex-direction: column;
+  }
+
+  .country_details {
+    flex-direction: column;
+  }
+
+  .border_countries {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .border_buttons_all {
+    flex-direction: column;
+  }
+
+  .country_heading {
+    margin-top: 5%;
+  }
+
+  .border_contry_buttons {
+    margin-top: 10%;
+  }
+
+  .details_left {
+    margin-left: 0;
   }
 }/*# sourceMappingURL=index.css.map */
