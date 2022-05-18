@@ -3,24 +3,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
-
-h1 {
-  font-size: 30px;
-}
-
-p {
-  font-size: 12px;
-  margin-top: 0.4%;
-  margin-left: 0.5rem;
-}
-
-h3 {
-  font-size: 16px;
-}
-
-body {
-  margin: 0 8%;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 body {
@@ -69,6 +52,24 @@ nav section {
 .home-icon {
   height: auto;
   width: 20px;
+}
+
+.h1_classes {
+  font-size: 30px;
+}
+
+.p_classes {
+  font-size: 12px;
+  margin-top: 0.4%;
+  margin-left: 0.5rem;
+}
+
+.h3_classes {
+  font-size: 16px;
+}
+
+.body_except_for_header {
+  margin: 0 8%;
 }
 
 .buttons {
@@ -131,7 +132,7 @@ nav section {
   margin-left: 0.5rem;
 }
 
-@media only screen and (max-width: 376px) {
+@media screen and (max-width: 376px) {
   body {
     background-color: hsl(0deg, 0%, 98%);
   }
