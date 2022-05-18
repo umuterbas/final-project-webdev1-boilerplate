@@ -1,4 +1,5 @@
 import AbstractView from "./AbstractView.js";
+import { countries } from "../index.js";
 
 export default class extends AbstractView{
     constructor(params) {
@@ -7,6 +8,7 @@ export default class extends AbstractView{
     }
 
     async getHTML() {
+        
         return `
                 <nav>
                 <section>
@@ -55,3 +57,4 @@ export default class extends AbstractView{
             </main>`;
     }
 }
+

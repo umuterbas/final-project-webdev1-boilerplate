@@ -1,6 +1,6 @@
 import {getCountries} from './countries.js'
 
-const countries = getCountries();
+export const countries = getCountries();
 
 // const display = document.querySelector("#app");
 // const displayAllCountries = () =>{
