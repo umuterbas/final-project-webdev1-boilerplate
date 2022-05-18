@@ -22,7 +22,7 @@ const prevSlide = () =>{
 }
 
 const changeSlide = ()=>{
-  for (i = 0; i < slides.length; i++) {
+  for (let i = 0; i < slides.length; i++) {
     slides[i].classList.remove("active");
   }
   slides[currentSlide].classList.add("active");

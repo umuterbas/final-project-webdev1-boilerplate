@@ -66,18 +66,17 @@ header{
         width: 100%;
 
         :first-child{
-            background-image: url("../images/compass.jpeg");
+            background-image: url("images/compass.jpeg");
         }
         :nth-child(2){
-            background-image: url("../images/japan.jpeg");
+            background-image: url("images/japan.jpeg");
         }
         :nth-child(3){
-            background-image: url("../images/ecuador.jpeg");
+            background-image: url("images/ecuador.jpeg");
         }
         :last-child{
-            background-image: url("../images/turkey.jpeg");
+            background-image: url("images/turkey.jpeg");
         }
-
     }
 
     &__image{
