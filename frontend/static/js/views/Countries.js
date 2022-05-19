@@ -8,6 +8,77 @@ export default class extends AbstractView{
     }
 
     async getHTML() {
+        console.log(countries);
+        // const countryCard = `
+        //      <div class="country-card">
+        //         <img class="country-img"src="${countries[0].flags.png}" alt="">
+        //             <div class="country-info">
+        //                 <h3 class="margin-bottom margin-top">${
+        //                   countries[0].name.common
+        //                 }</h3>
+        //                 <div class="flex"><p class="margin-right"><b>Population:</b> </p><p> ${countries[0].population.toLocaleString(
+        //                   "en-US"
+        //                 )}</p></div>
+        //                 <div class="flex" ><p class="margin-right" ><b>Region:</b> </p><p>${
+        //                   countries[0].region
+        //                 }</p></div>
+        //                 <div class="flex" ><p class="margin-right" ><b>Capital:</b> </p><p>${
+        //                   countries[0].capital
+        //                 }</p></div>
+        //             </div>
+        //     </div>
+        // `;
+
+        
+
+        const countryCards = () =>{
+            let card ='';
+            // for(let elem of countries){
+            //     card +=`
+            //         <div class="country-card">
+            //             <img class="country-img"src="${elem.flags.png}" alt=""></img>
+            //                 <div class="country-info">
+            //                     <h3 class="margin-bottom margin-top">${
+            //                     elem.name.common
+            //                     }</h3>
+            //                     <div class="flex"><p class="margin-right"><b>Population:</b> </p><p> ${elem.population.toLocaleString(
+            //                     "en-US"
+            //                     )}</p></div>
+            //                     <div class="flex" ><p class="margin-right" ><b>Region:</b> </p><p>${
+            //                     elem.region
+            //                     }</p></div>
+            //                     <div class="flex" ><p class="margin-right" ><b>Capital:</b> </p><p>${
+            //                     elem.capital
+            //                     }</p></div>
+            //                 </div>
+            //         </div>`
+            //     }
+
+                countries.forEach(element => {
+                    card += `
+                    <div class="country-card">
+                        <img class="country-img"src="${
+                          element.flags.png
+                        }" alt=""></img>
+                            <div class="country-info">
+                                <h3 class="margin-bottom margin-top">${
+                                  element.name.common
+                                }</h3>
+                                <div class="flex"><p class="margin-right"><b>Population:</b> </p><p> ${element.population.toLocaleString(
+                                  "en-US"
+                                )}</p></div>
+                                <div class="flex" ><p class="margin-right" ><b>Region:</b> </p><p>${
+                                  element.region
+                                }</p></div>
+                                <div class="flex" ><p class="margin-right" ><b>Capital:</b> </p><p>${
+                                  element.capital
+                                }</p></div>
+                            </div>
+                    </div>`;
+                });
+            return card;
+        }
+
         return `
                 <nav>
                 <section>
@@ -24,7 +95,7 @@ export default class extends AbstractView{
                 <div class="input">
                     <div class="search-bar-container center">
                         <a href="" class="center"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"/></svg></a>
-                        <input class="search-bar" type="text" placeholder="Search for a country..">
+                        <input name="word" id="searchBar" class="search-bar" type="text" placeholder="Search for a country..">
                     </div>
                     <div class="dropdown">
                         <div class="dropdown-menu">
@@ -40,19 +111,8 @@ export default class extends AbstractView{
                     </div>
                 </div>
             </section>
-            <main>
-                <section class="main-content-container">
-                    <div class="country-card">
-                        <img class="country-img"src="./1200px-Flag_of_Germany.svg.png" alt="">
-                        <div class="country-info">
-                            <h3 class="margin-bottom margin-top">Germany</h3>
-                            <div class="flex"><p class="margin-right"><b>Population:</b> </p><p> 81111818</p></div> 
-                            <div class="flex" ><p class="margin-right" ><b>Region:</b> </p><p> Europe</p></div> 
-                            <div class="flex" ><p class="margin-right" ><b>Capital:</b> </p><p> Berlin</p></div> 
-                        </div>
-                    </div>
-
-                </section>
+            <main class="country-list-main">
+            ${countryCards()}
             </main>`;
     }
 }

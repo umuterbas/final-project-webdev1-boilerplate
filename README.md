@@ -14,8 +14,8 @@ Your challenge is to integrate with the [REST Countries V2 API](https://restcoun
 
 Your users should be able to:
 
-- See all countries from the API on the homepage
-- Search for a country using an `input` field
+- See all countries from the API on the homepage Done
+- Search for a country using an `input` field. working
 - Filter countries by region (Bonus: If you have extra time, work on different filters to practice your JS skills)
 - Click on a country to see more detailed information on a separate page
 - Click through to the border countries on the detail page
@@ -32,7 +32,7 @@ Check the design folder to understand what it is being asked for.
 Homepage - `localhost:3000/` - It should be just a Hero page. Search for it and get some references.
 It is not included in the design images but I am sure you can think in something AWESOME!
 
-Countries - `localhost:300/countries` - It shows the whole list of countries, where users can filter by name using the input on the left or by region, using the dropdown on the right. Feel free to add a filter section for an extra challenge.
+Countries - `localhost:3000/countries` - It shows the whole list of countries, where users can filter by name using the input on the left or by region, using the dropdown on the right. Feel free to add a filter section for an extra challenge.
 
 Country - `localhost:3000/countries/:id` - When one of the countries' card is clicked, it should redirect the user to the country's page, where is possible to see more information. Don't forget to add the border countries as buttons and redirect to their's page if clicked.
 Also, it should have a button to go back to countries' page. Use `cca3` as the `id` of the country.
