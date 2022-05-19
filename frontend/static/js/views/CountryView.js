@@ -39,8 +39,6 @@ export default class extends AbstractView {
                 </div>
                 <div class="details_all">
     
-    
-                
                     <div class="details_left">
     
                         <div class="headings_div country_heading">
