@@ -1,5 +1,9 @@
 import AbstractView from "./AbstractView.js";
 
+import { countries } from "../index.js";
+
+console.log(countries)
+
 export default class extends AbstractView {
     constructor(params) {
         super(params);
