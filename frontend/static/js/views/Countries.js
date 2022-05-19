@@ -111,7 +111,7 @@ export default class extends AbstractView{
                     </div>
                 </div>
             </section>
-            <main>
+            <main class="country-list-main">
             ${countryCards()}
             </main>`;
     }
