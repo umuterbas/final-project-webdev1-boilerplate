@@ -12,13 +12,12 @@ body {
 
 .title {
   font-weight: 800;
-  font-size: 18px;
+  font-size: 28px;
 }
 
 .subtitle {
-  color: black;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 22px;
 }
 
 nav {
@@ -26,13 +25,14 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 60px;
+  height: 70px;
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.19);
 }
+
 nav section {
   width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 150px;
+  padding-right: 150px;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -40,7 +40,7 @@ nav section {
 
 .dark-moon {
   height: auto;
-  width: 16px;
+  width: 22px;
 }
 
 .dark-mode-container {
@@ -51,7 +51,7 @@ nav section {
 
 .home-icon {
   height: auto;
-  width: 20px;
+  width: 28px;
 }
 
 .h1_classes {
@@ -138,13 +138,14 @@ nav section {
   }
 
   .title {
-    font-weight: 800;
-    font-size: 28px;
+    font-weight: 100;
+    font-size: 18px;
   }
 
   .subtitle {
+    color: black;
     font-weight: 600;
-    font-size: 22px;
+    font-size: 16px;
   }
 
   nav {
@@ -152,13 +153,14 @@ nav section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 60px;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   }
+
   nav section {
     width: 100%;
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: 20px;
+    padding-right: 20px;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -166,7 +168,7 @@ nav section {
 
   .dark-moon {
     height: auto;
-    width: 22px;
+    width: 16px;
   }
 
   .dark-mode-container {
@@ -177,7 +179,7 @@ nav section {
 
   .home-icon {
     height: auto;
-    width: 28px;
+    width: 20px;
   }
 
   .details_all {
