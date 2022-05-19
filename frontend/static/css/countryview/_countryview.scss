@@ -10,7 +10,8 @@ $button_border_color: rgb(118, 117, 117);
     font-family: 'Nunito Sans', sans-serif;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Redressed&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
 
 body {
     background-color: hsl(0, 0%, 98%);
@@ -146,6 +147,8 @@ nav {
 
 @media screen and (max-width: 376px) {
 
+
+    
     body {
         background-color: hsl(0, 0%, 98%);
     }
