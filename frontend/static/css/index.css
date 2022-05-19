@@ -39,11 +39,12 @@ header i {
   cursor: pointer;
 }
 
-.container {
+.slider-container {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  width: 100%;
 }
 
 .slider {
@@ -84,13 +85,13 @@ header i {
   background-image: url("images/compass.jpeg");
 }
 .slider__slides :nth-child(2) {
-  background-image: url("images/turkey.jpeg");
-}
-.slider__slides :nth-child(3) {
   background-image: url("images/ecuador.jpeg");
 }
-.slider__slides :last-child {
+.slider__slides :nth-child(3) {
   background-image: url("images/japan.jpeg");
+}
+.slider__slides :last-child {
+  background-image: url("images/turkey.jpeg");
 }
 .slider__image {
   display: flex;
