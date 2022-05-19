@@ -21,11 +21,12 @@ header{
     }
 }
 
-.container{
+.slider-container{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh
+    height: 100vh;
+    width: 100%;
 }
 
 .slider{
@@ -69,13 +70,13 @@ header{
             background-image: url("images/compass.jpeg");
         }
         :nth-child(2){
-            background-image: url("images/turkey.jpeg");
-        }
-        :nth-child(3){
             background-image: url("images/ecuador.jpeg");
         }
-        :last-child{
+        :nth-child(3){
             background-image: url("images/japan.jpeg");
+        }
+        :last-child{
+            background-image: url("images/turkey.jpeg");
         }
     }
 
