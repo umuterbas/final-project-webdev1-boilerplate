@@ -2,7 +2,7 @@ import AbstractView from "./AbstractView.js";
 
 import { countries } from "../index.js";
 
-// console.log(countries)
+console.log(countries)
 
 export default class extends AbstractView {
     constructor(params) {
@@ -12,24 +12,7 @@ export default class extends AbstractView {
 
     async getHTML() {
         console.log(this.params.id);
-
-        function findCountry(id) {
-            for (let i = 0; i < countries.length; i++) {
-                const country = countries[i];
-                if (country.cca3.toLowerCase() === id) {
-                    return country
-                }
-                
-            }
-            
-        }
-        const selectedCountry = findCountry(this.params.id);
-        console.log(selectedCountry)
-        
-        return `<body>
-
         const countryParam = this.params.id;
-
 
         let targetCountry = []
         countries.forEach((item) => {
