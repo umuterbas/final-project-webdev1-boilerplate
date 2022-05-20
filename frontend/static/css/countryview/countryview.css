@@ -41,6 +41,7 @@ nav section {
 .dark-moon {
   height: auto;
   width: 22px;
+  cursor: pointer;
 }
 
 .dark-mode-container {
@@ -52,6 +53,7 @@ nav section {
 .home-icon {
   height: auto;
   width: 28px;
+  cursor: pointer;
 }
 
 .h1_classes {
@@ -78,6 +80,7 @@ nav section {
   background-color: white;
   border-color: rgb(118, 117, 117);
   padding: 10px 30px;
+  cursor: pointer;
 }
 
 .country_details {
@@ -130,6 +133,7 @@ nav section {
 
 .border_contry_buttons {
   margin-left: 0.5rem;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 376px) {
