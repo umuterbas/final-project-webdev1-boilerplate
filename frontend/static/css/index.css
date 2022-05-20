@@ -154,6 +154,7 @@ nav section {
 .dark-moon {
   height: auto;
   width: 22px;
+  cursor: pointer;
 }
 
 .dark-mode-container {
@@ -165,6 +166,7 @@ nav section {
 .home-icon {
   height: auto;
   width: 28px;
+  cursor: pointer;
 }
 
 .h1_classes {
@@ -191,6 +193,7 @@ nav section {
   background-color: white;
   border-color: rgb(118, 117, 117);
   padding: 10px 30px;
+  cursor: pointer;
 }
 
 .country_details {
@@ -331,7 +334,7 @@ nav section {
   font-family: "Nunito Sans", sans-serif;
 }
 
-main {
+.country-list-main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   flex-wrap: wrap;

@@ -22,7 +22,7 @@ export default class extends AbstractView{
                                 <div id="slideshow" class="slider__image"></div>
                                 <div id="slideshow" class="slider__image"></div>
                             </div>
-                            <span class="link-btn"><a href=${"./Countries"}>Explore the world !!</a></span>
+                            <span class="link-btn"><a href=${"./countries"}>Explore the world !!</a></span>
                         </div>
                     </div>
                 </div>
