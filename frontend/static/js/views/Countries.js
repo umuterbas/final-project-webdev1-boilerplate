@@ -8,6 +8,7 @@ export default class extends AbstractView{
     }
 
     async getHTML() {
+
         console.log(countries);
 
         const countryCards = () =>{
@@ -19,7 +20,7 @@ export default class extends AbstractView{
                           element.flags.png
                         }" alt=""></img>
                             <div class="country-info">
-                                <h3 class="margin-bottom margin-top">${
+                                <h3 class="margin-bottom margin-top" id="nam">${
                                   element.name.common
                                 }</h3>
                                 <div class="flex"><p class="margin-right"><b>Population:</b> </p><p> ${element.population.toLocaleString(
@@ -53,16 +54,18 @@ export default class extends AbstractView{
             <section class="input-container">
                 <div class="input">
                     <div class="search-bar-container center">
-                        <a href="" class="center"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"/></svg></a>
+                        <figure class="center" id="searchBtn"><svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"/></svg></figure>
                         <input name="word" id="searchBar" class="search-bar" type="text" placeholder="Search for a country..">
                     </div>
                     <div class="dropdown">
                         <div class="dropdown-menu">
                             <button class="dropbtn">Filter by Region</button>
                                 <div class="dropdown-content">
-                                    <a href="#">Link 1</a>
-                                    <a href="#">Link 2</a>
-                                    <a href="#">Link 3</a>
+                                    <a class="dropdown-item" id="africa">Africa</a>
+                                    <a class="dropdown-item"id="america">America</a>
+                                    <a class="dropdown-item" id="asia" >Asia</a>
+                                    <a  class="dropdown-item" id="europe" >Europe</a>
+                                    <a class="dropdown-item" id="oceania" >Oceania</a>
                                 </div>
                         </div>
                         <svg class="caret-down"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"/></svg>
@@ -74,6 +77,9 @@ export default class extends AbstractView{
             ${countryCards()}
             </main>`;
     }
+
+    
+
 }
 
 

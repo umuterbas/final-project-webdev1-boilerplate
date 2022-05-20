@@ -70,6 +70,9 @@
     background-color: white;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
   }
+  .search-bar-container figure {
+    cursor: pointer;
+  }
 
   input:focus, textarea:focus, select:focus {
     outline: none;
@@ -263,6 +266,9 @@
     width: fit-content;
     background-color: white;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  }
+  .search-bar-container figure {
+    cursor: pointer;
   }
 
   input:focus, textarea:focus, select:focus {

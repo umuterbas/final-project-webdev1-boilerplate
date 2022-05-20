@@ -50,9 +50,73 @@ window.addEventListener("DOMContentLoaded", (event) => {
         }
       })
     })
+    
+     // Filter
+let asia=document.getElementById("asia");
+let america=document.getElementById("america");
+let africa=document.getElementById("africa");
+let oceania=document.getElementById("oceania");
+let europe=document.getElementById("europe");
+
+asia.addEventListener("click",(e)=>{
+  countryCard.forEach(item=>{
+    if(item.innerText.toLowerCase().indexOf("asia")>-1){
+      item.style.display="block"
+    }
+    else{
+      item.style.display="none"
+    }
+  })
+})
+
+america.addEventListener("click",(e)=>{
+  countryCard.forEach(item=>{
+    if(item.innerText.toLowerCase().indexOf("america")>-1){
+      item.style.display="block"
+    }
+    else{
+      item.style.display="none"
+    }
+  })
+})
+
+africa.addEventListener("click",(e)=>{
+  countryCard.forEach(item=>{
+    if(item.innerText.toLowerCase().indexOf("africa")>-1){
+      item.style.display="block"
+    }
+    else{
+      item.style.display="none"
+    }
+  })
+})
+
+oceania.addEventListener("click",(e)=>{
+  countryCard.forEach(item=>{
+    if(item.innerText.toLowerCase().indexOf("oceania")>-1){
+      item.style.display="block"
+    }
+    else{
+      item.style.display="none"
+    }
+  })
+})
+
+europe.addEventListener("click",(e)=>{
+  countryCard.forEach(item=>{
+    if(item.innerText.toLowerCase().indexOf("europe")>-1){
+      item.style.display="block"
+    }
+    else{
+      item.style.display="none"
+    }
+  })
+})
+});
+    
   }else{
 
   }
 
 
-});
+ 
