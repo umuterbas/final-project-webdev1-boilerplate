@@ -10,6 +10,12 @@
 }
 
 body {
+  &.dark-mode {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(207, 26%, 17%);
+    border-color: rgb(208, 216, 224);
+  }
+
   color: hsl(200, 15%, 8%);
   background-color: hsl(0, 0%, 98%);
 }
@@ -17,4 +23,12 @@ body {
 .dark-mode {
   color: hsl(0, 0%, 100%);
   background-color: hsl(207, 26%, 17%);
+  border-color: rgb(208, 216, 224);
+
+}
+
+input {
+  &.dark-mode{
+    background-color: hsl(207, 26%, 17%);
+  }
 }
