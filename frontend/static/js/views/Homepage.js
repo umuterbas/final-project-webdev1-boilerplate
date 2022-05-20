@@ -13,7 +13,7 @@ export default class extends AbstractView{
                     <h1>Country List</h1>
                     <i class="fa-solid fa-moon"></i>
                 </header>
-                <main>
+                <div class="hero-main">
                     <div class="slider-container">
                         <div class="slider">
                             <div class="slider__slides">
@@ -22,10 +22,10 @@ export default class extends AbstractView{
                                 <div id="slideshow" class="slider__image"></div>
                                 <div id="slideshow" class="slider__image"></div>
                             </div>
-                            <span class="link-btn"><a href=${"./Countries"}>Explore the world !!</a></span>
+                            <span class="link-btn"><a href=${"./countries"}>Explore the world !!</a></span>
                         </div>
                     </div>
-                </main>
+                </div>
             </section>
             `;
       return heroPage;

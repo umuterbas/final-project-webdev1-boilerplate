@@ -10,54 +10,12 @@ export default class extends AbstractView{
     async getHTML() {
 
         console.log(countries);
-        // const countryCard = `
-        //      <div class="country-card">
-        //         <img class="country-img"src="${countries[0].flags.png}" alt="">
-        //             <div class="country-info">
-        //                 <h3 class="margin-bottom margin-top">${
-        //                   countries[0].name.common
-        //                 }</h3>
-        //                 <div class="flex"><p class="margin-right"><b>Population:</b> </p><p> ${countries[0].population.toLocaleString(
-        //                   "en-US"
-        //                 )}</p></div>
-        //                 <div class="flex" ><p class="margin-right" ><b>Region:</b> </p><p>${
-        //                   countries[0].region
-        //                 }</p></div>
-        //                 <div class="flex" ><p class="margin-right" ><b>Capital:</b> </p><p>${
-        //                   countries[0].capital
-        //                 }</p></div>
-        //             </div>
-        //     </div>
-        // `;
-
-      
 
         const countryCards = () =>{
             let card ='';
-            // for(let elem of countries){
-            //     card +=`
-            //         <div class="country-card">
-            //             <img class="country-img"src="${elem.flags.png}" alt=""></img>
-            //                 <div class="country-info">
-            //                     <h3 class="margin-bottom margin-top">${
-            //                     elem.name.common
-            //                     }</h3>
-            //                     <div class="flex"><p class="margin-right"><b>Population:</b> </p><p> ${elem.population.toLocaleString(
-            //                     "en-US"
-            //                     )}</p></div>
-            //                     <div class="flex" ><p class="margin-right" ><b>Region:</b> </p><p>${
-            //                     elem.region
-            //                     }</p></div>
-            //                     <div class="flex" ><p class="margin-right" ><b>Capital:</b> </p><p>${
-            //                     elem.capital
-            //                     }</p></div>
-            //                 </div>
-            //         </div>`
-            //     }
-
                 countries.forEach(element => {
                     card += `
-                    <div class="country-card">
+                    <div class="country-card" >
                         <img class="country-img"src="${
                           element.flags.png
                         }" alt=""></img>
@@ -74,6 +32,7 @@ export default class extends AbstractView{
                                 <div class="flex" ><p class="margin-right" ><b>Capital:</b> </p><p>${
                                   element.capital
                                 }</p></div>
+                                <button onclick= "window.location.href = '/countries/${element.cca3.toLowerCase()}'">See more details</button>
                             </div>
                     </div>`;
                 });
@@ -112,7 +71,7 @@ export default class extends AbstractView{
                     </div>
                 </div>
             </section>
-            <main>
+            <main class="country-list-main">
             ${countryCards()}
             </main>`;
     }
@@ -120,4 +79,5 @@ export default class extends AbstractView{
     
 
 }
+
 

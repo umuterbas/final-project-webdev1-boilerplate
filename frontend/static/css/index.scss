@@ -1,21 +1,20 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Nunito Sans', sans-serif;
+@use "./heropage/hero.scss";
+@use "./countryview/countryview.scss";
+@use "./country-page/country-page.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans", sans-serif;
 }
 
-body{
-    color:hsl(200, 15%, 8%);
-    background-color:hsl(0, 0%, 98%);
+body {
+  color: hsl(200, 15%, 8%);
+  background-color: hsl(0, 0%, 98%);
 }
 
-.dark-mode{
-    color: hsl(0, 0%, 100%);
-    background-color: hsl(207, 26%, 17%);
+.dark-mode {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(207, 26%, 17%);
 }
-
-@import "./heropage/hero";
-
-@import "./countryview/countryview";
-@import "./country-page/country-page.css";

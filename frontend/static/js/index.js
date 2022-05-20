@@ -2,82 +2,55 @@ import { getCountries } from "./countries.js";
 
 export const countries = getCountries();
 
-console.log(countries);
+// console.log(countries);
 
 window.addEventListener("DOMContentLoaded", (event) => {
-  
-    console.log("DOM fully loaded and parsed");
+  console.log("DOM fully loaded and parsed");
+
+  if (window.location.href === "localhost:3000") {
     //Get DOM
     let slides = document.querySelectorAll(".slider__image");
-  //   let navLinks = document.querySelectorAll(".slider__navlink");
-  //   const nextButton = document.querySelector("#nav-button--next");
-  //   const prevButton = document.querySelector("#nav-button--prev");
-
     let currentSlide = 0;
 
-    const nextSlide = ()=>{
-      (currentSlide == slides.length - 1)? currentSlide = 0 : currentSlide++;
-      // console.log(currentSlide);
-      // navLinkChange();
+    const nextSlide = () => {
+      currentSlide == slides.length - 1 ? (currentSlide = 0) : currentSlide++;
       changeSlide();
       resetTimer();
-    }
-
-    const prevSlide = () =>{
-      (currentSlide == 0)? currentSlide = slides.length - 1 : currentSlide--;
-      // console.log(currentSlide);
-      // navLinkChange();
-      changeSlide();
-      resetTimer();
-    }
-
-    const changeSlide = ()=>{
+    };
+    const changeSlide = () => {
       for (let i = 0; i < slides.length; i++) {
         slides[i].classList.remove("active");
       }
       slides[currentSlide].classList.add("active");
-    }
+    };
 
- 
-
-    const autoChange = ()=>{
-      // console.log("auto");
-      // navLinkChange();
+    const autoChange = () => {
       nextSlide();
-    }
+    };
 
-    // let timer = setInterval(autoChange, 5000);
+    let timer = setInterval(autoChange, 5000);
 
     //when either button or indicator(nav links) are clicked, stop the timer and then start again
-    const resetTimer = () =>{
+    const resetTimer = () => {
       clearInterval(timer);
       timer = setInterval(autoChange, 5000);
-    }
+    };
+  }
 
 
-    //Search
-    const searchBar = document.querySelector("#searchBar");
-    let countryCard = document.querySelectorAll(".country-card");
-    let inputValue=""
-    let updatedInfo=""
-    searchBar.addEventListener("keyup", function(e){
-      inputValue=e.target.value;
-      updatedInfo=countries.filter((country)=>{
-        return country.name.common.toLowerCase().indexOf(inputValue)!==-1
-      });
-      
+  
+  // Search
+  const searchBar = document.querySelector("#searchBar");
+  let countryCard = document.querySelectorAll(".country-card");
 
-    countryCard.forEach(element=>{
-      let nam=document.querySelectorAll("#nam")
-      if(!(updatedInfo===nam.value)){
-        element.style.display="none"
+  searchBar.addEventListener("input", (e)=>{
+    const inputTxt = e.target.value;
+    countryCard.forEach(item=>{
+      if (item.innerText.toLowerCase().indexOf(inputTxt) > -1){
+        item.style.display = "block"
+      }else{
+        item.style.display = "none"
       }
     })
-
-  });
-
-  // Displaying searchBar
-  
-
-
-})
+  })
+});
