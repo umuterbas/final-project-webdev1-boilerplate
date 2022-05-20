@@ -9,18 +9,12 @@ export default class extends AbstractView{
 
     async getHTML() {
         console.log(countries);
-        // let eachCountryUrl = "localhost:3000/countries/:id"
-        // countries.forEach(item =>{
-        //     eachCountryUrl = `localhost:3000/countries/${item.cca3.toLowerCase()}`;
-        //     console.log(eachCountryUrl);
-        // })
 
         const countryCards = () =>{
             let card ='';
                 countries.forEach(element => {
-                    // console.log(element.cca3.toLowerCase());
                     card += `
-                    <div class="country-card">
+                    <div class="country-card" >
                         <img class="country-img"src="${
                           element.flags.png
                         }" alt=""></img>
@@ -81,4 +75,5 @@ export default class extends AbstractView{
             </main>`;
     }
 }
+
 
