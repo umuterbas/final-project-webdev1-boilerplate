@@ -7,7 +7,7 @@ export const countries = getCountries();
 window.addEventListener("DOMContentLoaded", (event) => {
   console.log("DOM fully loaded and parsed");
 
-  if (window.location.href === "localhost:3000") {
+  if (window.location.pathname === "/") {
     //Get DOM
     let slides = document.querySelectorAll(".slider__image");
     let currentSlide = 0;
@@ -35,22 +35,84 @@ window.addEventListener("DOMContentLoaded", (event) => {
       clearInterval(timer);
       timer = setInterval(autoChange, 5000);
     };
-  }
-
-
+  }else if(window.location.pathname === "/countries"){
+    // Search
+    const searchBar = document.querySelector("#searchBar");
+    let countryCard = document.querySelectorAll(".country-card");
   
-  // Search
-  const searchBar = document.querySelector("#searchBar");
-  let countryCard = document.querySelectorAll(".country-card");
-
-  searchBar.addEventListener("input", (e)=>{
-    const inputTxt = e.target.value;
-    countryCard.forEach(item=>{
-      if (item.innerText.toLowerCase().indexOf(inputTxt) > -1){
-        item.style.display = "block"
-      }else{
-        item.style.display = "none"
-      }
+    searchBar.addEventListener("input", (e)=>{
+      const inputTxt = e.target.value;
+      countryCard.forEach(item=>{
+        if (item.innerText.toLowerCase().indexOf(inputTxt) > -1){
+          item.style.display = "block"
+        }else{
+          item.style.display = "none"
+        }
+      })
     })
-  })
+    
+     // Filter
+      let asia=document.getElementById("asia");
+      let america=document.getElementById("america");
+      let africa=document.getElementById("africa");
+      let oceania=document.getElementById("oceania");
+      let europe=document.getElementById("europe");
+
+      asia.addEventListener("click",(e)=>{
+        countryCard.forEach(item=>{
+          if(item.innerText.toLowerCase().indexOf("asia")>-1){
+            item.style.display="block"
+          }
+          else{
+            item.style.display="none"
+          }
+        })
+      })
+
+      america.addEventListener("click",(e)=>{
+        countryCard.forEach(item=>{
+          if(item.innerText.toLowerCase().indexOf("america")>-1){
+            item.style.display="block"
+          }
+          else{
+            item.style.display="none"
+          }
+        })
+      })
+
+      africa.addEventListener("click",(e)=>{
+        countryCard.forEach(item=>{
+          if(item.innerText.toLowerCase().indexOf("africa")>-1){
+            item.style.display="block"
+          }
+          else{
+            item.style.display="none"
+          }
+        })
+      })
+
+      oceania.addEventListener("click",(e)=>{
+        countryCard.forEach(item=>{
+          if(item.innerText.toLowerCase().indexOf("oceania")>-1){
+            item.style.display="block"
+          }
+          else{
+            item.style.display="none"
+          }
+        })
+      })
+
+      europe.addEventListener("click",(e)=>{
+        countryCard.forEach(item=>{
+          if(item.innerText.toLowerCase().indexOf("europe")>-1){
+            item.style.display="block"
+          }
+          else{
+            item.style.display="none"
+          }
+        })
+      })
+    }else{
+
+  }
 });
