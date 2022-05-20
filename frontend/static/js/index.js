@@ -115,4 +115,15 @@ window.addEventListener("DOMContentLoaded", (event) => {
     }else{
 
   }
+
+   //Dark Mode
+
+   const darkModeBtn = document.querySelector(".dark-mode-container");
+   
+   darkModeBtn.addEventListener("click", function() {
+     document.body.classList.toggle("dark-mode")
+     document.getElementById("searchBar").classList.toggle("dark-mode")
+   } )
+
+
 });
