@@ -2,50 +2,48 @@ import AbstractView from "./AbstractView.js";
 
 import { countries } from "../index.js";
 
-console.log(countries)
+console.log(countries);
 
 export default class extends AbstractView {
-    constructor(params) {
-        super(params);
-        this.setTitle("Country");
-    }
+  constructor(params) {
+    super(params);
+    this.setTitle("Country");
+  }
 
-    async getHTML() {
-        console.log(this.params.id);
-        const countryParam = this.params.id;
+  async getHTML() {
+    console.log(this.params.id);
+    const countryParam = this.params.id;
 
-        let targetCountry = []
-        countries.forEach((item) => {
-            if(countryParam === item.cca3.toLowerCase()){
-                console.log(item);
-                targetCountry = item;
-            }
-        });
+    let targetCountry = [];
+    countries.forEach((item) => {
+      if (countryParam === item.cca3.toLowerCase()) {
+        console.log(item);
+        targetCountry = item;
+      }
+    });
 
-        //Get currency
-        let curr;
-        curr = (Object.values(targetCountry.currencies));
-        // console.log(curr);
-        //Get language
-        let lang;
-        lang = Object.values(targetCountry.languages);
-        // console.log(lang);
+    //Get currency
+    const curr = Object.values(targetCountry.currencies);
+    // console.log(curr);
+    //Get language
+    const lang = Object.values(targetCountry.languages);
+    // console.log(lang);
 
-        let nativeName;
-        nativeName = Object.values(targetCountry.name.nativeName);
-        // console.log(nativeName);
+    const nativeName = Object.values(targetCountry.name.nativeName);
+    // console.log(nativeName);
 
-        let borderBtn;
-        const borderCountries = () =>{
-            targetCountry.borders.forEach(item =>{
-                borderBtn += `
+    let borderBtn = "";
+    const borderCountries = () => {
+      targetCountry.borders.forEach((item) => {
+        console.log(item);
+        borderBtn += `
                     <button class="buttons border_contry_buttons" onclick= "window.location.href = '/countries/${item.toLowerCase()}';"> ${item}</button>
                 `;
-            })
-            return borderBtn
-        }
+      });
+      return borderBtn;
+    };
 
-        return `
+    return `
                 <nav>
                     <section>
                         <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
@@ -130,8 +128,8 @@ export default class extends AbstractView {
                                 <div class="headings_div">
                                     <h3 class="h3_classes">Currencies:</h3>
                                     <p class="p_classes">${curr[0].symbol} ${
-          curr[0].name
-        }</p>
+      curr[0].name
+    }</p>
                                 </div>
                                 <div class="headings_div">
                                     <h3 class="h3_classes">Languages:</h3>
@@ -142,5 +140,5 @@ export default class extends AbstractView {
                     </div>
                 </div>
     <`;
-    }
+  }
 }
