@@ -23,7 +23,20 @@ export default class extends AbstractView {
     });
 
     //Get currency
-    const curr = Object.values(targetCountry.currencies);
+    
+    let curr;
+    let Nm;
+    const currFunc=()=>{
+      if(targetCountry.currencies===undefined){
+        return curr="No currency";
+      }
+      else{
+        return targetCountry.currencies[Object.keys(targetCountry.currencies)[0]].name + " "+targetCountry.currencies[Object.keys(targetCountry.currencies)[0]].symbol;
+        
+      }
+    }
+
+    
     // console.log(curr);
     //Get language
     const lang = Object.values(targetCountry.languages);
@@ -41,7 +54,7 @@ export default class extends AbstractView {
                     `;
       })
       }else{
-        borderBtn = '';
+        borderBtn = 'No borders';
       };
       return borderBtn;
     };
@@ -130,9 +143,7 @@ export default class extends AbstractView {
                                 </div>
                                 <div class="headings_div">
                                     <h3 class="h3_classes">Currencies:</h3>
-                                    <p class="p_classes">${curr[0].symbol} ${
-                                      curr[0].name
-                                    }</p>
+                                    <p class="p_classes">${currFunc()}</p>
                                 </div>
                                 <div class="headings_div">
                                     <h3 class="h3_classes">Languages:</h3>
