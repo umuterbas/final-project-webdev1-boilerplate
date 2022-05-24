@@ -34,12 +34,15 @@ export default class extends AbstractView {
 
     let borderBtn = "";
     const borderCountries = () => {
-      targetCountry.borders.forEach((item) => {
-        console.log(item);
-        borderBtn += `
-                    <button class="buttons border_contry_buttons" onclick= "window.location.href = '/countries/${item.toLowerCase()}';"> ${item}</button>
-                `;
-      });
+      if(targetCountry.borders){
+        targetCountry.borders.forEach((item) => {
+            borderBtn += `
+                        <button class="buttons border_contry_buttons" onclick= "window.location.href = '/countries/${item.toLowerCase()}';"> ${item}</button>
+                    `;
+      })
+      }else{
+        borderBtn = '';
+      };
       return borderBtn;
     };
 
