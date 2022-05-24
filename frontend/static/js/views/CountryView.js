@@ -21,25 +21,47 @@ export default class extends AbstractView {
         targetCountry = item;
       }
     });
-
+    console.log(targetCountry);
     //Get currency
     const curr = Object.values(targetCountry.currencies);
-    // console.log(curr);
     //Get language
     const lang = Object.values(targetCountry.languages);
-    // console.log(lang);
-
+    //Get Native name
     const nativeName = Object.values(targetCountry.name.nativeName);
-    // console.log(nativeName);
+
+    // countries.forEach(Element =>{
+    //   for(let i = 0; i <= targetCountry.borders.length; i++){
+    //     if(Element.cca3 === targetCountry.borders[i]){
+    //       console.log(Element.name.common);
+    //     }
+    //   }
+    // })
+
+    // for(let Item of targetCountry.borders){
+    //   // console.log(Item);
+    //   countries.forEach(Element =>{
+    //     if(Item === Element.cca3){
+    //       console.log(Element.name.common);
+    //     }
+    //   })
+    // }
 
     let borderBtn = "";
+    let borderCountryName = ""
     const borderCountries = () => {
       if(targetCountry.borders){
         targetCountry.borders.forEach((item) => {
-          borderBtn += `
-                      <button class="buttons border_contry_buttons" onclick= "window.location.href = '/countries/${item.toLowerCase()}';"> ${item}</button>
-                    `;
-      })
+          countries.forEach((Element) => {
+            if (item === Element.cca3) {
+              borderCountryName = Element.name.common;
+              console.log(borderCountryName)
+            }
+          });
+          borderBtn +=
+            `
+              <button class="buttons border_contry_buttons" onclick= "window.location.href = '/countries/${item.toLowerCase()}';"> ${borderCountryName}</button>
+            `;
+          })
       }else{
         borderBtn = '';
       };
@@ -142,6 +164,6 @@ export default class extends AbstractView {
                         </div>
                     </div>
                 </div>
-    <`;
+    `;
   }
 }
