@@ -21,25 +21,45 @@ export default class extends AbstractView {
         targetCountry = item;
       }
     });
-
+    console.log(targetCountry);
     //Get currency
-    const curr = Object.values(targetCountry.currencies);
+    
+    let curr;
+    let Nm;
+    const currFunc=()=>{
+      if(targetCountry.currencies === undefined){
+        return curr="No currency";
+      }
+      else{
+        return targetCountry.currencies[Object.keys(targetCountry.currencies)[0]].name + " "+targetCountry.currencies[Object.keys(targetCountry.currencies)[0]].symbol;
+      }
+    }  
     // console.log(curr);
+    const currency = Object.values(targetCountry.currencies);
     //Get language
     const lang = Object.values(targetCountry.languages);
-    // console.log(lang);
-
+    //Get Native name
     const nativeName = Object.values(targetCountry.name.nativeName);
-    // console.log(nativeName);
 
     let borderBtn = "";
+    let borderCountryName = ""
     const borderCountries = () => {
-      targetCountry.borders.forEach((item) => {
-        console.log(item);
-        borderBtn += `
-                    <button class="buttons border_contry_buttons" onclick= "window.location.href = '/countries/${item.toLowerCase()}';"> ${item}</button>
-                `;
-      });
+      if(targetCountry.borders){
+        targetCountry.borders.forEach((item) => {
+          countries.forEach((Element) => {
+            if (item === Element.cca3) {
+              borderCountryName = Element.name.common;
+              console.log(borderCountryName)
+            }
+          });
+          borderBtn +=
+            `
+              <button class="buttons border_contry_buttons" onclick= "window.location.href = '/countries/${item.toLowerCase()}';"> ${borderCountryName}</button>
+            `;
+          })
+      }else{
+        borderBtn = 'No borders';
+      };
       return borderBtn;
     };
 
@@ -120,9 +140,7 @@ export default class extends AbstractView {
                                 </div>
                                 <div class="headings_div">
                                     <h3 class="h3_classes">Currencies:</h3>
-                                    <p class="p_classes">${curr[0].symbol} ${
-      curr[0].name
-    }</p>
+                                    <p class="p_classes">${currFunc()}</p>
                                 </div>
                                 <div class="headings_div">
                                     <h3 class="h3_classes">Languages:</h3>
@@ -132,6 +150,6 @@ export default class extends AbstractView {
                         </div>
                     </div>
                 </div>
-    <`;
+    `;
   }
 }
