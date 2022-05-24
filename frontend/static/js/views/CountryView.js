@@ -36,8 +36,8 @@ export default class extends AbstractView {
     const borderCountries = () => {
       if(targetCountry.borders){
         targetCountry.borders.forEach((item) => {
-            borderBtn += `
-                        <button class="buttons border_contry_buttons" onclick= "window.location.href = '/countries/${item.toLowerCase()}';"> ${item}</button>
+          borderBtn += `
+                      <button class="buttons border_contry_buttons" onclick= "window.location.href = '/countries/${item.toLowerCase()}';"> ${item}</button>
                     `;
       })
       }else{
@@ -131,8 +131,8 @@ export default class extends AbstractView {
                                 <div class="headings_div">
                                     <h3 class="h3_classes">Currencies:</h3>
                                     <p class="p_classes">${curr[0].symbol} ${
-      curr[0].name
-    }</p>
+                                      curr[0].name
+                                    }</p>
                                 </div>
                                 <div class="headings_div">
                                     <h3 class="h3_classes">Languages:</h3>
