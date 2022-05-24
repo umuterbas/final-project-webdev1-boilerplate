@@ -25,7 +25,7 @@ export default class extends AbstractView {
     //Get currency
     
     let curr;
-    let Nm;
+    // let Nm;
     const currFunc=()=>{
       if(targetCountry.currencies === undefined){
         return curr="No currency";
@@ -35,7 +35,7 @@ export default class extends AbstractView {
       }
     }  
     // console.log(curr);
-    const currency = Object.values(targetCountry.currencies);
+    // const currency = Object.values(targetCountry.currencies);
     //Get language
     const lang = Object.values(targetCountry.languages);
     //Get Native name
