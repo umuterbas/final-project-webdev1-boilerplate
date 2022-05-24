@@ -27,37 +27,19 @@ export default class extends AbstractView {
     let curr;
     let Nm;
     const currFunc=()=>{
-      if(targetCountry.currencies===undefined){
+      if(targetCountry.currencies === undefined){
         return curr="No currency";
       }
       else{
         return targetCountry.currencies[Object.keys(targetCountry.currencies)[0]].name + " "+targetCountry.currencies[Object.keys(targetCountry.currencies)[0]].symbol;
-        
       }
     }  
     // console.log(curr);
-    const curr = Object.values(targetCountry.currencies);
+    const currency = Object.values(targetCountry.currencies);
     //Get language
     const lang = Object.values(targetCountry.languages);
     //Get Native name
     const nativeName = Object.values(targetCountry.name.nativeName);
-
-    // countries.forEach(Element =>{
-    //   for(let i = 0; i <= targetCountry.borders.length; i++){
-    //     if(Element.cca3 === targetCountry.borders[i]){
-    //       console.log(Element.name.common);
-    //     }
-    //   }
-    // })
-
-    // for(let Item of targetCountry.borders){
-    //   // console.log(Item);
-    //   countries.forEach(Element =>{
-    //     if(Item === Element.cca3){
-    //       console.log(Element.name.common);
-    //     }
-    //   })
-    // }
 
     let borderBtn = "";
     let borderCountryName = ""
