@@ -39,14 +39,21 @@ window.addEventListener("DOMContentLoaded", (event) => {
     // Search
     const searchBar = document.querySelector("#searchBar");
     let countryCard = document.querySelectorAll(".country-card");
+    let countryName = document.querySelectorAll("h3");
+    // let country = countryName;
+
+    console.log(countryCard);
+    console.log(countryName);
+    // console.log(country);
+
   
     searchBar.addEventListener("input", (e)=>{
       const inputTxt = e.target.value;
-      countryCard.forEach(item=>{
+      countryName.forEach(item=>{
         if (item.innerText.toLowerCase().indexOf(inputTxt) > -1){
-          item.style.display = "block"
+          item.parentElement.parentElement.style.display = "block";
         }else{
-          item.style.display = "none"
+          item.parentElement.parentElement.style.display = "none";
         }
       })
     })
